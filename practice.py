@@ -14,6 +14,8 @@ class Square(pygame.sprite.Sprite):
         if pressed_keys[K_LEFT] and self.rect.left > 0:
             self.rect.move_ip(-1,0)
 
+    
+
 pygame.init()
 screen = pygame.display.set_mode((800,600))
 square = Square()
