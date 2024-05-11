@@ -10,6 +10,9 @@ class Square(pygame.sprite.Sprite):
         self.surf=pygame.Surface((25,25))
         self.surf.fill((0,200,255))
         self.rect = self.surf.get_rect()
+        self.x = self.rect.x
+
+        
 
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
@@ -19,7 +22,7 @@ moving_left = False
 running = True
 while running:
     for event in pygame.event.get():
-        if event.type == QUIT:
+        if event.type == pygame.QUIT:
             running = False
 
     screen.blit(square.surf,square.rect)#arguments: source,destination
